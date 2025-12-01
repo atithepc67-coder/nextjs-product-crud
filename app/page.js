@@ -21,20 +21,27 @@ export default function Home() {
           <p className="text-purple-400 text-sm font-medium opacity-80">Next.js 15 • Prisma • MySQL</p>
         </div>
 
-        {/* Buttons: ปรับให้สั้นลง */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <Link href="/products">
-            <button className="px-8 py-3 bg-white text-black rounded-full font-bold text-lg hover:bg-slate-200 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-              🚀 Dashboard
-            </button>
-          </Link>
+        {/* Buttons: เพิ่มปุ่ม Register เข้าไป */}
+<div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+  <Link href="/products">
+    <button className="px-8 py-3 bg-white text-black rounded-full font-bold text-lg hover:bg-slate-200 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+      🚀 Dashboard
+    </button>
+  </Link>
 
-          <Link href="/login">
-            <button className="px-8 py-3 bg-transparent border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all">
-              Login
-            </button>
-          </Link>
-        </div>
+  <Link href="/login">
+    <button className="px-8 py-3 bg-transparent border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+      เข้าสู่ระบบ
+    </button>
+  </Link>
+
+  {/* ✅ ปุ่มใหม่: สมัครสมาชิก */}
+  <Link href="/register">
+    <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold text-lg hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg">
+      สมัครสมาชิก
+    </button>
+  </Link>
+</div>
 
       </div>
 
