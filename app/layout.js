@@ -1,3 +1,4 @@
+import { SessionProvider } from "next-auth/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -19,11 +20,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <SessionProvider>
+       <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 text-white`}
       >
-        {children}
-      </body>
+          {children}
+        </body>
+      </SessionProvider>
     </html>
   );
 }
+
